@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ProductDetailActivity : AppCompatActivity() {
@@ -32,6 +33,16 @@ class ProductDetailActivity : AppCompatActivity() {
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, subItems)
         listViewSubProducts.adapter = adapter
+
+        // Handle clicks on sub-items to show Toast with the selected product name
+        listViewSubProducts.setOnItemClickListener { _, _, position, _ ->
+            val subItem = subItems[position]
+            Toast.makeText(
+                this,
+                "Produit sélectionné : $subItem",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
 
         btnRetour.setOnClickListener {
             finish()
