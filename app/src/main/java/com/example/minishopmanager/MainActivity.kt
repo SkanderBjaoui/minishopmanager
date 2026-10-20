@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
                 "Produit sélectionné : $produitSelectionne",
                 Toast.LENGTH_SHORT
             ).show()
+
+            val intent = Intent(this, ProductDetailActivity::class.java).apply {
+                putExtra("CATEGORY_NAME", produitSelectionne)
+            }
+            startActivity(intent)
         }
 
         // 3. Existing navigation button
