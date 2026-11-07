@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo de l'application"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:textColor="@color/bluePrimary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/etStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom d'utilisateur"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <CheckBox
+        android:id="@+id/cbRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Se souvenir de moi"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:backgroundTint="@color/bluePrimary"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
